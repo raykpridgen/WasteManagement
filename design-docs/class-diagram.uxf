@@ -1,0 +1,54 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>120</x><y>40</y><w>220</w><h>170</h></coordinates><panel_attributes>Node
+--
+-_id: int
+-_name: string
+-_desc: string
+-_connections: vector&lt;Connections&gt;
+-_vermins: vector&lt;Vermin&gt; 
+-_widgets: vector&lt;Widgets&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>220</y><w>210</w><h>150</h></coordinates><panel_attributes>Map
+--
+-_nodes: vector&lt;Node&gt;
+-_player: Player
+-_actors: vector&lt;Actor&gt;
+-_gameObjs: vector&lt;GameObjects&gt;
+--
++PlayerMove(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>60</y><w>380</w><h>180</h></coordinates><panel_attributes>Asset
+--
+-_id: int
+-_isOffensive: bool
+-_value: int
+-_message: string
+--
++Asset(string name, string message, int value, bool isOffensive)
++GetName(): string
++string GetMessage(): string
++int GetValue(): int
++isOffensive(): bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>260</y><w>330</w><h>160</h></coordinates><panel_attributes>Combatant
+--
+-_name: string
+-_health int
+-_fightCoefficient: int
+--
++Combatant(name: string, health: int, coefficient: int)
++Fight(): int
++string GetName(): string
++int GetHealth(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>470</y><w>290</w><h>100</h></coordinates><panel_attributes>Player
+--
+-_assets: vector&lt;Asset&gt;
+--
++Player(name: string, health: int, coefficient: int)
++AddAsset(Asset asset): void
++GetTotalAssetValue(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>490</y><w>220</w><h>100</h></coordinates><panel_attributes>Vocabulary
+--
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>380</y><w>220</w><h>100</h></coordinates><panel_attributes>Battle
+--
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>470</y><w>300</w><h>100</h></coordinates><panel_attributes>Monster
+--
++Monster(name: string, health: int, coefficient: int)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>410</y><w>170</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>150;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>410</y><w>100</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;80;60</additional_attributes></element></diagram>
